@@ -1,0 +1,13 @@
+<h1>Notas</h1>
+
+<div>
+    <% @notes.each do |note|%>
+        <p>
+            <%= note.text %> - <%= note.user.username%>
+        </p>
+    <% end %>
+</div>
+
+<div>
+    <%= link_to 'Crear nota', new_note_path%>
+</div>
